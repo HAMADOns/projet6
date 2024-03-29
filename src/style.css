@@ -3,12 +3,11 @@
   flex-flow: row wrap;
   text-align: center;
   flex-direction: row;
-  height: 50vh;
+  height: 70vh;
 }
 
 .wrapper > * {
   padding: 10px;
-  margin: 10px;
   flex: 1 100%;
 }
 
@@ -22,6 +21,9 @@
 }
 
 .content {
+  background-color: #f1d8ef;
   flex-grow: 1;
-  padding: 20px;
+  padding: 10px;
+  overflow: hidden;
+  height: auto;
 }
