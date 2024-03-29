@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  flex-direction: row;
+  height: 50vh;
+}
+
+.wrapper > * {
+  padding: 10px;
+  margin: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../public/plan.jpg");
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
