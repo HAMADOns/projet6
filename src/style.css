@@ -43,7 +43,7 @@
 
 /*pour la respensive selon la taille du périphérique => @media*/
 
-@media screen /*ou all*/and (max-width: 900px/*on choisit la largeur pck les appareils souvent changent de largeur(pc, tel, tablette), là on va appliquer les modifs sur les appareils qui sont moins de 900px, au delà on reste sur les specifications d'origine*/) {
+@media screen /*ou all*/and (max-width: 1500px/*on choisit la largeur pck les appareils souvent changent de largeur(pc, tel, tablette), là on va appliquer les modifs sur les appareils qui sont moins de 900px, au delà on reste sur les specifications d'origine*/) {
   /*min-width: 900px le changement va etre appliqué à partir de 900px juska l'infinie si je ne définis pas une taille*/
   .bloc {
     /*width: 500px; arrivant à 900px le conteneur devien 500px de largeur mais le texte reste en dehors*/
