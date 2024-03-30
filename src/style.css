@@ -27,7 +27,7 @@
   overflow: hidden;
   height: auto;
 }
-
+/*https://www.youtube.com/watch?v=BdzKNrxLiSs*/
 .bloc {
   width: 1500px; /*largeur fix*/
   height: 100%; /*reponsive du texte : le conteneur se rempli du text en bas si le texte va depasser la hauteur du conteneur*/
@@ -38,6 +38,7 @@
 .bloc p {
   /*<p>*/
   font-size: 1.3em;
+  overflow: hidden;
 }
 
 /*pour la respensive selon la taille du périphérique => @media*/
