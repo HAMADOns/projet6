@@ -1,9 +1,9 @@
 .wrapper {
   display: flex;
   flex-flow: row wrap;
-  text-align: center;
+
   flex-direction: row;
-  height: 70vh;
+  height: 10vh;
 }
 
 .wrapper > * {
@@ -12,40 +12,41 @@
 }
 
 .header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
+  padding: 100px;
   background-size: cover;
   background-position: center;
   background-image: url("../public/plan.jpg");
+  height: 100%;
 }
 
 .content {
   background-color: #f1d8ef;
-  flex-grow: 1;
-  padding: 10px;
-  overflow: hidden;
-  height: auto;
+  padding: 100px;
+  height: 100%;
 }
 /*https://www.youtube.com/watch?v=BdzKNrxLiSs*/
 .bloc {
-  width: 1500px; /*largeur fix*/
+  width: 500px; /*largeur fix*/
   height: 100%; /*reponsive du texte : le conteneur se rempli du text en bas si le texte va depasser la hauteur du conteneur*/
   background-color: red;
   margin: 0 auto; /*centré le conteneur*/
+  padding: 20px;
 }
 
 .bloc p {
   /*<p>*/
   font-size: 1.3em;
-  overflow: hidden;
 }
 
 /*pour la respensive selon la taille du périphérique => @media*/
 
-@media screen /*ou all*/and (max-width: 1500px/*on choisit la largeur pck les appareils souvent changent de largeur(pc, tel, tablette), là on va appliquer les modifs sur les appareils qui sont moins de 900px, au delà on reste sur les specifications d'origine*/) {
+@media screen /*ou all*/and (max-width: 1000px/*on choisit la largeur pck les appareils souvent changent de largeur(pc, tel, tablette), là on va appliquer les modifs sur les appareils qui sont moins de 900px, au delà on reste sur les specifications d'origine*/) {
   /*min-width: 900px le changement va etre appliqué à partir de 900px juska l'infinie si je ne définis pas une taille*/
   .bloc {
+    /*width: 500px; arrivant à 900px le conteneur devien 500px de largeur mais le texte reste en dehors*/
+    width: 90%; /*preference on met un pourcentage pour qu'il soit responsive avec tt les appareils, quand on arrive à 900px l conteneur va s'adapter à la taille de l'ecran : 90% pour laisser une marge sur les cotés*/
+  }
+  .content {
     /*width: 500px; arrivant à 900px le conteneur devien 500px de largeur mais le texte reste en dehors*/
     width: 90%; /*preference on met un pourcentage pour qu'il soit responsive avec tt les appareils, quand on arrive à 900px l conteneur va s'adapter à la taille de l'ecran : 90% pour laisser une marge sur les cotés*/
   }
