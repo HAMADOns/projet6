@@ -1,3 +1,63 @@
+.container {
+  height: 100vh; /* Utilise toute la hauteur de la fenêtre */
+  position: relative;
+}
+
+.header {
+  padding: 100px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../public/plan.jpg");
+  height: 20%;
+  position: relative;
+}
+
+.content {
+  padding: 150px;
+  background-color: #f1d8ef;
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
+}
+/*https://www.youtube.com/watch?v=BdzKNrxLiSs*/
+.bloc {
+  width: 600px; /*longueur fix*/
+  /*reponsive du texte : le conteneur se rempli du text en bas si le texte va depasser la hauteur du conteneur*/
+  background-color: white;
+  margin: 0 auto; /*centré le conteneur*/
+  position: absolute;
+  height: auto;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+.bloc p {
+  /*<p>*/
+  font-size: 1.3em;
+  color: black;
+}
+
+/*pour la respensive selon la taille du périphérique => @media*/
+
+@media screen /*ou all*/and (max-width: 900px/*on choisit la largeur pck les appareils souvent changent de largeur(pc, tel, tablette), là on va appliquer les modifs sur les appareils qui sont moins de 900px, au delà on reste sur les specifications d'origine*/) {
+  /*min-width: 900px le changement va etre appliqué à partir de 900px juska l'infinie si je ne définis pas une taille*/
+  .bloc {
+    /*width: 500px; arrivant à 900px le conteneur devien 500px de largeur mais le texte reste en dehors*/
+    width: 50%; /*preference on met un pourcentage pour qu'il soit responsive avec tt les appareils, quand on arrive à 900px l conteneur va s'adapter à la taille de l'ecran : 90% de la page totale pour laisser une marge sur les cotés*/
+    height: auto;
+    top: 80%;
+  }
+  .bloc p {
+    /*<p>*/
+    font-size: 1em;
+  }
+  .content {
+    height: 240%;
+  }
+}
+/* 
+
 .header {
   padding: 100px;
   background-size: cover;
@@ -11,25 +71,25 @@
   height: 100%;
   margin: 0 auto;
 }
-/*https://www.youtube.com/watch?v=BdzKNrxLiSs*/
+
 .bloc {
-  width: 500px; /*largeur fix*/
-  height: 100%; /*reponsive du texte : le conteneur se rempli du text en bas si le texte va depasser la hauteur du conteneur*/
+  width: 500px; 
+  height: 100%; 
   background-color: red;
-  margin: 0 auto; /*centré le conteneur*/
+  margin: 0 auto; 
 }
 
 .bloc p {
-  /*<p>*/
+  
   font-size: 1.3em;
 }
 
-/*pour la respensive selon la taille du périphérique => @media*/
 
-@media screen /*ou all*/and (max-width: 1100px/*on choisit la largeur pck les appareils souvent changent de largeur(pc, tel, tablette), là on va appliquer les modifs sur les appareils qui sont moins de 900px, au delà on reste sur les specifications d'origine*/) {
-  /*min-width: 900px le changement va etre appliqué à partir de 900px juska l'infinie si je ne définis pas une taille*/
+
+@media screen and (max-width: 1100px) {
+  
   .bloc {
-    /*width: 500px; arrivant à 900px le conteneur devien 500px de largeur mais le texte reste en dehors*/
-    width: 50%; /*preference on met un pourcentage pour qu'il soit responsive avec tt les appareils, quand on arrive à 900px l conteneur va s'adapter à la taille de l'ecran : 90% de la page totale pour laisser une marge sur les cotés*/
+    
+    width: 50%; 
   }
-}
+} */
