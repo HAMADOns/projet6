@@ -5,6 +5,8 @@ import "./style.css";
 function App() {
   return (
     <>
+      <div className="header"></div>
+      <div className="content">test</div>
       <div className="bloc">
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
